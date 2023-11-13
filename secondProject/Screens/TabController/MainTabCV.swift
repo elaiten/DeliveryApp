@@ -8,6 +8,7 @@ import UIKit
 
 class MainTabVC: UITabBarController {
 
+    
     private var menuVC = MenuScreenVC()
     private var basketVC = BasketScreenVC()
     private var detailVC = DetailScreenVC()
@@ -30,6 +31,7 @@ class MainTabVC: UITabBarController {
 //    private var detailVC: DetailScreenVC {
 //
 //    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
