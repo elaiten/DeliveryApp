@@ -4,7 +4,6 @@
 //
 //  Created by Руслан on 29.10.2023.
 //
-
 import UIKit
 
 class MainTabVC: UITabBarController {
