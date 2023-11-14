@@ -69,7 +69,8 @@ extension BasketScreenVC {
     func setupConstraints() {
         basketTableView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).inset(80)
-            make.left.right.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.left.right.equalTo(view.safeAreaLayoutGuide)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(80)
         }
         nameLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
