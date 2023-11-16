@@ -26,12 +26,24 @@ final class BasketScreenVC: UIViewController {
         let table = UITableView()
         table.backgroundColor = .white
         table.register(BasketCell.self, forCellReuseIdentifier: BasketCell.basketID)
+        table.register(BasketInfo.self, forCellReuseIdentifier: BasketInfo.infoID)
         table.dataSource = self
         table.delegate = self
 //        table.translatesAutoresizingMaskIntoConstraints = true
         table.allowsSelection = false
         table.separatorColor = .clear
         return table
+    }()
+    
+    private lazy var bonusButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .orange.withAlphaComponent(0.7)
+        button.setTitle("Ввести промокод", for: .normal)
+        button.layer.cornerRadius = 25
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 240).isActive = true
+        button.setTitleColor(.white, for: .normal)
+        return button
     }()
     
     override func viewDidLoad() {
@@ -64,6 +76,7 @@ extension BasketScreenVC {
         basketTableView.rowHeight = 140
         view.addSubview(basketTableView)
         view.addSubview(orderBurron)
+        view.addSubview(bonusButton)
     }
     
     func setupConstraints() {
@@ -79,7 +92,6 @@ extension BasketScreenVC {
             make.left.right.equalTo(view.safeAreaLayoutGuide).inset(0)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-
     }
 }
 
