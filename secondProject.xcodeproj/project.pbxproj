@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B08E0C42B05F9650008FBF6 /* BasketInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B08E0C32B05F9650008FBF6 /* BasketInfo.swift */; };
 		1B0CDE812AEA8B70007B8099 /* BasketStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CDE802AEA8B70007B8099 /* BasketStepper.swift */; };
 		1B0CDEC42AEE2F46007B8099 /* BasketStartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CDEC32AEE2F45007B8099 /* BasketStartLabel.swift */; };
 		1B0CDEC62AEE4589007B8099 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CDEC52AEE4589007B8099 /* TabBarModel.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B08E0C32B05F9650008FBF6 /* BasketInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketInfo.swift; sourceTree = "<group>"; };
 		1B0CDE802AEA8B70007B8099 /* BasketStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketStepper.swift; sourceTree = "<group>"; };
 		1B0CDEC32AEE2F45007B8099 /* BasketStartLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketStartLabel.swift; sourceTree = "<group>"; };
 		1B0CDEC52AEE4589007B8099 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				1BC7C1F12AE9221E005EDFCA /* BasketCell.swift */,
 				1B0CDE802AEA8B70007B8099 /* BasketStepper.swift */,
 				1B0CDEC32AEE2F45007B8099 /* BasketStartLabel.swift */,
+				1B08E0C32B05F9650008FBF6 /* BasketInfo.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				1B0F2C592AB468EF0024FACD /* SceneDelegate.swift in Sources */,
 				1BC7C1F22AE9221E005EDFCA /* BasketCell.swift in Sources */,
 				1B0F2C912AB495460024FACD /* ProductsService.swift in Sources */,
+				1B08E0C42B05F9650008FBF6 /* BasketInfo.swift in Sources */,
 				1B0CDEC42AEE2F46007B8099 /* BasketStartLabel.swift in Sources */,
 				1B444B642AE7C778004CCC5D /* BasketScreenVC.swift in Sources */,
 			);

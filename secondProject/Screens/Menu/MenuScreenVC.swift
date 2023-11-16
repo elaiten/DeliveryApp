@@ -19,7 +19,7 @@ final class MenuScreenVC: UIViewController {
     
     lazy var tabelView: UITableView = {
         let tabelView = UITableView.init()
-        tabelView.backgroundColor = .orange
+        tabelView.backgroundColor = .white
         tabelView.dataSource = self
         tabelView.delegate = self
         tabelView.separatorColor = .clear

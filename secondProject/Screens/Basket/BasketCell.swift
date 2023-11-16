@@ -77,6 +77,17 @@ class BasketCell: UITableViewCell {
     }()
     
     
+    private lazy var bonusButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .orange.withAlphaComponent(0.7)
+        button.setTitle("Ввести промокод", for: .normal)
+        button.layer.cornerRadius = 25
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 240).isActive = true
+        button.setTitleColor(.white, for: .normal)
+        return button
+    }()
+    
     @objc private func stepperValueChanged(_ sender: UIStepper){
         someNumber = sender.value
         print(someNumber)
@@ -144,6 +155,7 @@ extension BasketCell {
         separatorView.snp.makeConstraints { make in
             make.bottom.left.right.equalTo(contentView)
         }
+
     
         
         //        stepperView.snp.makeConstraints { make in
