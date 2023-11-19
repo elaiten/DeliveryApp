@@ -5,6 +5,8 @@ final class ProductCell: UITableViewCell {
     
     static let reuseID = "ProductCell"
     
+    var onPriceButttonTapped: (()->())?
+    
     private var verticalStackView: UIStackView = {
         var stackView = UIStackView.init()
         stackView.axis = .vertical
@@ -19,7 +21,7 @@ final class ProductCell: UITableViewCell {
         var label = UILabel()
         label.text = "Hawaii"
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.translatesAutoresizingMaskIntoConstraints = false
+        //label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -33,13 +35,20 @@ final class ProductCell: UITableViewCell {
     }()
     
     private var priceButton: UIButton = {
-        var price = UIButton()
-        price.setTitle("469", for: .normal)
-        price.backgroundColor = .orange.withAlphaComponent(0.1)
-        price.layer.cornerRadius = 20
-        price.setTitleColor(.brown, for: .normal)
-        return price
+        var button = UIButton()
+        button.setTitle("469", for: .normal)
+        button.backgroundColor = .orange.withAlphaComponent(0.1)
+        button.layer.cornerRadius = 20
+        button.setTitleColor(.brown, for: .normal)
+        
+        button.addTarget(nil, action: #selector(priceButtonTapped), for: .touchUpInside)
+        
+        return button
     }()
+    
+    @objc func priceButtonTapped() {
+        onPriceButttonTapped?()
+    }
     
      var productImages: UIImageView = {
         var image = UIImageView()

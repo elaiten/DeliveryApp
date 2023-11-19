@@ -8,21 +8,22 @@
 import UIKit
 
 class OrderButtonView: UIView {
-
-   
+    
+    var onButtonTapped: (() -> ())?
     var orderButton: UIButton = {
         let button = UIButton()
-//        button.setTitle("345", for: .normal)
+        //        button.setTitle("345", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 20
         button.backgroundColor = .orange
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.addTarget(nil, action: #selector(buttonTapped), for: .touchUpInside)
         return button
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-       
+        
         setupViews()
         setupConstraints()
     }
@@ -34,7 +35,7 @@ class OrderButtonView: UIView {
     func setupViews() {
         self.backgroundColor = .systemBackground
         self.addSubview(orderButton)
-      
+        
     }
     
     func setupConstraints() {
@@ -49,6 +50,8 @@ class OrderButtonView: UIView {
     func update(_ product: Product?) {
         orderButton.setTitle("В корзину за \(product?.price ?? 0)", for: .normal)
     }
-   
-
+    
+    @objc func buttonTapped () {
+        onButtonTapped?()
+    }
 }
