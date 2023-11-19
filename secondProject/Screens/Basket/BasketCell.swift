@@ -12,10 +12,7 @@ class BasketCell: UITableViewCell {
     var someNumber: Double = 1.0
     
     static let basketID = "BasketCell"
-    
-//    let stepperView = BasketStepper()
-    
-    
+        
     private lazy var verticalStackView: UIStackView = {
         var stackView = UIStackView()
         stackView.axis = .vertical
@@ -39,14 +36,12 @@ class BasketCell: UITableViewCell {
         var label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 15)
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private lazy var infoProductLabel: UILabel = {
         var label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 10)
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .darkGray
         
         return label
@@ -77,17 +72,6 @@ class BasketCell: UITableViewCell {
     }()
     
     
-    private lazy var bonusButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .orange.withAlphaComponent(0.7)
-        button.setTitle("Ввести промокод", for: .normal)
-        button.layer.cornerRadius = 25
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 240).isActive = true
-        button.setTitleColor(.white, for: .normal)
-        return button
-    }()
-    
     @objc private func stepperValueChanged(_ sender: UIStepper){
         someNumber = sender.value
         print(someNumber)
@@ -95,7 +79,6 @@ class BasketCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        setupStepper()
         setupViews()
         setupConstraints()
     }
@@ -122,11 +105,10 @@ extension BasketCell {
     func setupViews() {
         contentView.addSubview(basketImage)
         contentView.addSubview(verticalStackView)
-        verticalStackView.addSubview(nameProductLabel)
-        verticalStackView.addSubview(infoProductLabel)
-        verticalStackView.addSubview(priceProductLabel)
+        verticalStackView.addArrangedSubview(nameProductLabel)
+        verticalStackView.addArrangedSubview(infoProductLabel)
+        verticalStackView.addArrangedSubview(priceProductLabel)
         contentView.addSubview(separatorView)
-        //verticalStackView.addSubview(stepperView)
         contentView.addSubview(basketStepper)
     }
     
@@ -139,29 +121,20 @@ extension BasketCell {
             make.top.right.bottom.equalTo(contentView).inset(16)
             make.left.equalTo(basketImage.snp.right).offset(16)
         }
-        nameProductLabel.snp.makeConstraints { make in
-            make.top.equalTo(contentView).offset(50)
-        }
-        infoProductLabel.snp.makeConstraints { make in
-            make.top.equalTo(nameProductLabel.snp.bottom).offset(5)
-        }
-        priceProductLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(basketStepper)
-            make.right.equalTo(basketStepper.snp.left).inset(-15)
-        }
         basketStepper.snp.makeConstraints { make in
             make.right.bottom.equalTo(contentView).inset(10)
         }
         separatorView.snp.makeConstraints { make in
             make.bottom.left.right.equalTo(contentView)
         }
-
-    
-        
-        //        stepperView.snp.makeConstraints { make in
-        //            make.bottom.equalTo(verticalStackView).offset(10)
-        //            make.right.equalTo(verticalStackView).offset(5)
-        //        }
+//
+//
+//
+//
+//        //        stepperView.snp.makeConstraints { make in
+//        //            make.bottom.equalTo(verticalStackView).offset(10)
+//        //            make.right.equalTo(verticalStackView).offset(5)
+//        //        }
     }
 }
 

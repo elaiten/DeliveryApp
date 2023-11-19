@@ -4,7 +4,7 @@
 //
 //  Created by Руслан on 15.09.2023.
 //
-import Foundation
+
 import UIKit
 import SnapKit
 
@@ -24,7 +24,6 @@ final class MenuScreenVC: UIViewController {
         tabelView.delegate = self
         tabelView.separatorColor = .clear
         tabelView.register(ProductCell.self, forCellReuseIdentifier: ProductCell.reuseID)
-        tabelView.translatesAutoresizingMaskIntoConstraints = false
         tabelView.allowsSelection = false
         return tabelView
     }()
@@ -67,6 +66,12 @@ extension MenuScreenVC: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseID, for: indexPath) as! ProductCell
         let product = products[indexPath.row]
         cell.update(product)
+        
+        cell.onPriceButttonTapped = {
+            print(#function)
+        }
+        
+        
         return cell
     }
     
