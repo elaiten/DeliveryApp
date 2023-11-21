@@ -8,15 +8,7 @@
 import UIKit
 
 class DetailScreenVC: UIViewController {
-    
-    //    var product: Product? = Product(name: "Гавайская", detail: "Горячая закуска с цыпленком, перчиком халапеньо, маринованными огурчиками, томатами, моцареллой и соусом барбекю в тонкой пшеничной лепешке.", info: "190 г", price: 590, image: "hawaii")
-    //
-    //
-    
-    
 
-    
-    
     let productService = ProductsService.init()
     var products: [Product] = [] {
         didSet {

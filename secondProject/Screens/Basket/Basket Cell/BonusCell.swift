@@ -5,6 +5,8 @@
 //  Created by Руслан on 19.11.2023.
 //
 
+//Добавляет View с Бонусной кнопкой
+
 import UIKit
 
 class BonusCell: UITableViewCell {
@@ -28,6 +30,7 @@ class BonusCell: UITableViewCell {
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button.widthAnchor.constraint(equalToConstant: 240).isActive = true
         button.setTitleColor(.white, for: .normal)
+//      Добавляем переход для нашей кнопки
         button.addTarget(nil, action: #selector(buttonTapped), for: .touchUpInside)
         return button
     }()
@@ -52,6 +55,7 @@ class BonusCell: UITableViewCell {
             make.top.bottom.right.left.equalTo(contentView).inset(10)
         }
     }
+//Функция вызова перехода для кнопки
     @objc func buttonTapped() {
         onButtonTapped?()
     }

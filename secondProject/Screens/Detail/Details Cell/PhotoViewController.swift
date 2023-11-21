@@ -1,9 +1,10 @@
 
+// PhotoViewController for PhotoViewController
+
 import SnapKit
-import Foundation
 import UIKit
 
-class ViewController: UIViewController {
+class PhotoViewController: UIViewController {
     
     lazy var collectionView: UICollectionView = {
         
@@ -29,7 +30,6 @@ class ViewController: UIViewController {
         return collectionView
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -48,16 +48,16 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+
+extension PhotoViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionCell.reuseID, for: indexPath) as! PhotoCollectionCell
         cell.backgroundColor = .yellow
-        
         return cell
     }
     

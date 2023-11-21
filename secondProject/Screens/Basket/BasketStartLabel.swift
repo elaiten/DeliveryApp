@@ -5,6 +5,7 @@
 //  Created by Руслан on 29.10.2023.
 //
 
+//Верхняя часть VC
 import UIKit
 
 class BasketStartLabel: UIView {

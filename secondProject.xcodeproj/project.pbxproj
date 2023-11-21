@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B08E0C42B05F9650008FBF6 /* BasketInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B08E0C32B05F9650008FBF6 /* BasketInfo.swift */; };
 		1B0CDE812AEA8B70007B8099 /* BasketStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CDE802AEA8B70007B8099 /* BasketStepper.swift */; };
 		1B0CDEC42AEE2F46007B8099 /* BasketStartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CDEC32AEE2F45007B8099 /* BasketStartLabel.swift */; };
 		1B0CDEC62AEE4589007B8099 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CDEC52AEE4589007B8099 /* TabBarModel.swift */; };
 		1B0CDECB2AEE4CC7007B8099 /* MainTabCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CDECA2AEE4CC7007B8099 /* MainTabCV.swift */; };
-		1B0CDECD2AEE51B7007B8099 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CDECC2AEE51B7007B8099 /* ViewController.swift */; };
+		1B0CDECD2AEE51B7007B8099 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CDECC2AEE51B7007B8099 /* PhotoViewController.swift */; };
 		1B0CDECF2AEE5475007B8099 /* PhotoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CDECE2AEE5475007B8099 /* PhotoCollectionCell.swift */; };
 		1B0F2C572AB468EF0024FACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0F2C562AB468EF0024FACD /* AppDelegate.swift */; };
 		1B0F2C592AB468EF0024FACD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0F2C582AB468EF0024FACD /* SceneDelegate.swift */; };
@@ -56,12 +55,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B08E0C32B05F9650008FBF6 /* BasketInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketInfo.swift; sourceTree = "<group>"; };
 		1B0CDE802AEA8B70007B8099 /* BasketStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketStepper.swift; sourceTree = "<group>"; };
 		1B0CDEC32AEE2F45007B8099 /* BasketStartLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketStartLabel.swift; sourceTree = "<group>"; };
 		1B0CDEC52AEE4589007B8099 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		1B0CDECA2AEE4CC7007B8099 /* MainTabCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabCV.swift; sourceTree = "<group>"; };
-		1B0CDECC2AEE51B7007B8099 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B0CDECC2AEE51B7007B8099 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		1B0CDECE2AEE5475007B8099 /* PhotoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionCell.swift; sourceTree = "<group>"; };
 		1B0F2C532AB468EF0024FACD /* secondProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = secondProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0F2C562AB468EF0024FACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,8 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				1B0CDECA2AEE4CC7007B8099 /* MainTabCV.swift */,
-				1B0CDECC2AEE51B7007B8099 /* ViewController.swift */,
-				1B0CDECE2AEE5475007B8099 /* PhotoCollectionCell.swift */,
 			);
 			path = TabController;
 			sourceTree = "<group>";
@@ -244,10 +240,9 @@
 			isa = PBXGroup;
 			children = (
 				1B3ADDAB2ADBD3AA000BC03E /* DetailScreenVC.swift */,
-				1B3ADDAD2ADBD559000BC03E /* ImageCell.swift */,
-				1B3ADDAF2ADBD880000BC03E /* InfoCell.swift */,
 				1B3ADDB12ADBE396000BC03E /* OrderButtonView.swift */,
 				1B444B602AE6A048004CCC5D /* BackButtonImage.swift */,
+				1B8261DF2B0C88D800DD376D /* Details Cell */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -256,14 +251,32 @@
 			isa = PBXGroup;
 			children = (
 				1B444B632AE7C778004CCC5D /* BasketScreenVC.swift */,
-				1BC7C1F12AE9221E005EDFCA /* BasketCell.swift */,
 				1B0CDE802AEA8B70007B8099 /* BasketStepper.swift */,
 				1B0CDEC32AEE2F45007B8099 /* BasketStartLabel.swift */,
-				1B08E0C32B05F9650008FBF6 /* BasketInfo.swift */,
+				1B8261E02B0C88F500DD376D /* Basket Cell */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		1B8261DF2B0C88D800DD376D /* Details Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1B0CDECC2AEE51B7007B8099 /* PhotoViewController.swift */,
+				1B0CDECE2AEE5475007B8099 /* PhotoCollectionCell.swift */,
+				1B3ADDAD2ADBD559000BC03E /* ImageCell.swift */,
+				1B3ADDAF2ADBD880000BC03E /* InfoCell.swift */,
+			);
+			path = "Details Cell";
+			sourceTree = "<group>";
+		};
+		1B8261E02B0C88F500DD376D /* Basket Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1BC7C1F12AE9221E005EDFCA /* BasketCell.swift */,
 				1BF2CAB82B09ED2500325C31 /* BonusCell.swift */,
 				1BF2CABA2B09F4B200325C31 /* DeliveryInfoCell.swift */,
 			);
-			path = Basket;
+			path = "Basket Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,11 +431,10 @@
 				1B3ADDB02ADBD880000BC03E /* InfoCell.swift in Sources */,
 				1B0CDEC62AEE4589007B8099 /* TabBarModel.swift in Sources */,
 				1B3ADDAE2ADBD559000BC03E /* ImageCell.swift in Sources */,
-				1B0CDECD2AEE51B7007B8099 /* ViewController.swift in Sources */,
+				1B0CDECD2AEE51B7007B8099 /* PhotoViewController.swift in Sources */,
 				1B0F2C592AB468EF0024FACD /* SceneDelegate.swift in Sources */,
 				1BC7C1F22AE9221E005EDFCA /* BasketCell.swift in Sources */,
 				1B0F2C912AB495460024FACD /* ProductsService.swift in Sources */,
-				1B08E0C42B05F9650008FBF6 /* BasketInfo.swift in Sources */,
 				1B0CDEC42AEE2F46007B8099 /* BasketStartLabel.swift in Sources */,
 				1B444B642AE7C778004CCC5D /* BasketScreenVC.swift in Sources */,
 			);
