@@ -1,10 +1,10 @@
+// UICollectionViewCell для PhotoViewController
 
 import UIKit
 
 class PhotoCollectionCell: UICollectionViewCell {
     
     static let reuseID = "PhotoCollectionCell"
-    
     
     var photoImageView: UIImageView = {
        let image = UIImageView()

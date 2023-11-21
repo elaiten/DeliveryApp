@@ -5,7 +5,7 @@
 //  Created by Руслан on 24.10.2023.
 //
 
-import Foundation
+//View корзины
 import UIKit
 import SnapKit
 
@@ -30,7 +30,6 @@ final class BasketScreenVC: UIViewController {
         table.register(DeliveryInfoCell.self, forCellReuseIdentifier: DeliveryInfoCell.deliveryInfoID)
         table.dataSource = self
         table.delegate = self
-        //        table.translatesAutoresizingMaskIntoConstraints = true
         table.allowsSelection = false
         table.separatorColor = .clear
         return table
@@ -48,31 +47,33 @@ final class BasketScreenVC: UIViewController {
         
         observeEvents()
     }
-    
+//    Функция для кнопки оформления заказа
     func observeEvents() {
         orderButtonView.onButtonTapped = {
             print(#function)
         }
     }
+//    Обновление продуктов
     func fetchProduct() {
         products = productService.fetchProduct()
     }
-    
+//   Обновление ифнормации для минимального заказа BasketStartLabel.swift
     func updateLabel() {
         nameLabel.basketStartLabel.text = "\(products.count) товара за \((products.first?.price)!) P"
     }
+//    Обновление цен для кнопки оформления заказов
     func updateButton() {
         orderButtonView.orderButton.setTitle("Оформить заказ за \((products.first?.price)!)", for: .normal)
     }
 }
 
+
+//MARK: - extension BasketScreenVC
+
 extension BasketScreenVC {
-    
-    
     func setupViews() {
         view.addSubview(nameLabel)
         view.backgroundColor = .white
-        //basketTableView.rowHeight = 140
         view.addSubview(basketTableView)
         view.addSubview(orderButtonView)
     }
@@ -93,12 +94,13 @@ extension BasketScreenVC {
     }
 }
 
+//MARK: - UITableViewDataSource, UITableViewDelegat
+
 extension BasketScreenVC: UITableViewDataSource, UITableViewDelegate {
-    //    Число с колличеством ячеек в TableView
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
-    //    возвращаем 2 ячейки через switch case
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section{
         case 0:
@@ -114,7 +116,6 @@ extension BasketScreenVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: BasketCell.basketID, for: indexPath) as! BasketCell
@@ -135,7 +136,6 @@ extension BasketScreenVC: UITableViewDataSource, UITableViewDelegate {
         }
         return UITableViewCell()
     }
-    
 }
 
 

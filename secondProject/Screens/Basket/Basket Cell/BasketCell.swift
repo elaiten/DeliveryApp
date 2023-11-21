@@ -5,6 +5,9 @@
 //  Created by Руслан on 25.10.2023.
 //
 
+
+
+// Ячейки который добавляют сами продукты описание, картинки
 import UIKit
 
 class BasketCell: UITableViewCell {
@@ -12,7 +15,7 @@ class BasketCell: UITableViewCell {
     var someNumber: Double = 1.0
     
     static let basketID = "BasketCell"
-        
+    
     private lazy var verticalStackView: UIStackView = {
         var stackView = UIStackView()
         stackView.axis = .vertical
@@ -64,7 +67,7 @@ class BasketCell: UITableViewCell {
     }()
     
     private lazy var basketStepper: UIStepper = {
-       var stepper = UIStepper()
+        var stepper = UIStepper()
         stepper.value = Double(1)
         stepper.stepValue = 1
         stepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
@@ -88,6 +91,9 @@ class BasketCell: UITableViewCell {
     }
     
 }
+
+
+//MARK: - extension BasketCell
 
 extension BasketCell {
     
@@ -127,23 +133,5 @@ extension BasketCell {
         separatorView.snp.makeConstraints { make in
             make.bottom.left.right.equalTo(contentView)
         }
-//
-//
-//
-//
-//        //        stepperView.snp.makeConstraints { make in
-//        //            make.bottom.equalTo(verticalStackView).offset(10)
-//        //            make.right.equalTo(verticalStackView).offset(5)
-//        //        }
     }
 }
-
-
-//    private func setupStepper() {
-//          stepperView.addTarget(self, action: #selector(stepperChangedValueAction), for: .valueChanged)
-//      }
-//
-//      @objc private func stepperChangedValueAction(sender: BasketStepper) {
-//          print(sender)
-//          print(sender.currentValue)
-//      }
