@@ -10,7 +10,7 @@ import SnapKit
 
 final class MenuScreenVC: UIViewController {
     
-    let productService = ProductsService.init()
+    let productService = ProductsService()
     var products: [Product] = [] {
         didSet {
             tabelView.reloadData()
