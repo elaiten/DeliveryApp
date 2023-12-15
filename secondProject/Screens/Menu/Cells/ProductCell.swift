@@ -1,6 +1,8 @@
 import UIKit
 import SnapKit
 
+
+
 final class ProductCell: UITableViewCell {
     
     static let reuseID = "ProductCell"
@@ -48,6 +50,8 @@ final class ProductCell: UITableViewCell {
     
     @objc func priceButtonTapped() {
         onPriceButttonTapped?()
+//        let viewController = DetailScreenVC()
+//        viewController.present(DetailScreenVC(), animated: true, completion: nil)
     }
     
      var productImages: UIImageView = {
